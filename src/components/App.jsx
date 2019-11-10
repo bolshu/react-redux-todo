@@ -5,7 +5,6 @@ import { Provider } from 'react-redux';
 import { Header } from './Header';
 import TaskCreatorContainer from './TaskCreator/TaskCreatorContainer';
 import TasksListContainer from './TasksList/TasksListContainer';
-import { TasksList } from './TasksList/TasksList';
 import { Footer } from './Footer';
 
 import rootReducer from '../store/reducers';
@@ -22,8 +21,6 @@ export default class App extends Component {
                     <TaskCreatorContainer />
 
                     <TasksListContainer />
-
-                    {/* <TasksList /> */}
 
                     <Footer />
                 </>

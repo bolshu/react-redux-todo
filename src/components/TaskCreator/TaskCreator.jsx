@@ -18,20 +18,20 @@ export default class TaskCreator extends React.Component {
     }
 
     onButtonClick() {
-        this.props.addTask(this.props.taskTitle);
+        if (this.state.taskTitle.trim() === '') return;
+
+        this.props.addTask(this.state.taskTitle);
         this.setState({
             taskTitle: '',
         });
     }
 
     render() {
-        const { taskTitle } = this.state;
-
         return (
             <>
                 <input
                     type="text"
-                    value={taskTitle}
+                    value={this.state.taskTitle}
                     onChange={this.onTitleChange}
                 />
                 <button

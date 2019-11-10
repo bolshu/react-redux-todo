@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { TasksList } from './TasksList';
+import { completeTask, removeTask } from './store/actions'
 
 class TasksListContainer extends React.Component {
     render() {
@@ -9,15 +10,19 @@ class TasksListContainer extends React.Component {
         return (
             <TasksList
                 tasks={tasks}
+                removeTask={removeTask}
             />
         )
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        tasks: state.taskCreator.tasks,
-    }
-}
+const mapStateToProps = state => ({
+    tasks: state.tasksList.tasks,
+});
 
-export default connect(mapStateToProps, null)(TasksListContainer);
+const mapDispatchToProps = {
+    completeTask,
+    removeTask,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(TasksListContainer);
