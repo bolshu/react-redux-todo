@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import TasksList from './TasksList';
+import { TasksList } from './TasksList';
 
 class TasksListContainer extends React.Component {
     render() {

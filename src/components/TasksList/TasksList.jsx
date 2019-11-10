@@ -9,7 +9,7 @@ export const TasksList = (props) => (
 
     // return (
     <>
-        {props.tasks.map((task, index) => {
+        {props.length && props.tasks.map((task, index) => {
             return (
                 <Task
                     key={`${task}-${index}`}
