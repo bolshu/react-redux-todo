@@ -7,16 +7,25 @@ export default class TaskCreator extends React.Component {
         this.onButtonClick = this.onButtonClick.bind(this);
     }
 
+    state = {
+        taskTitle: '',
+    }
+
     onTitleChange(event) {
-        this.props.setTaskTitle(event.target.value);
+        this.setState({
+            taskTitle: event.target.value,
+        });
     }
 
     onButtonClick() {
         this.props.addTask(this.props.taskTitle);
+        this.setState({
+            taskTitle: '',
+        });
     }
 
     render() {
-        const { taskTitle } = this.props;
+        const { taskTitle } = this.state;
 
         return (
             <>

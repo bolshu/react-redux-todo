@@ -20,6 +20,4 @@ const mapStateToProps = state => {
     }
 }
 
-const mapDispatchToProps = {}
-
-export default connect(mapStateToProps)(TasksListContainer);
+export default connect(mapStateToProps, null)(TasksListContainer);

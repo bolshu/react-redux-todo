@@ -5,7 +5,7 @@ export default class Task extends React.Component {
         console.log(this.props);
 
         return (
-            <>
+            <li>
                 <label>
                     <input type="checkbox" />
                     <span>
@@ -13,9 +13,9 @@ export default class Task extends React.Component {
                     </span>
                     <button>
                         remove task
-                </button>
+                    </button>
                 </label>
-            </>
+            </li>
         )
     }
 }

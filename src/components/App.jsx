@@ -21,9 +21,9 @@ export default class App extends Component {
 
                     <TaskCreatorContainer />
 
-                    {/* <TasksListContainer /> */}
+                    <TasksListContainer />
 
-                    <TasksList />
+                    {/* <TasksList /> */}
 
                     <Footer />
                 </>

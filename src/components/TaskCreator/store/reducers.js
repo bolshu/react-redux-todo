@@ -1,26 +1,16 @@
-import { CHANGE_TASK_CREATER_TITLE, ADD_TASK } from './actions';
+import { ADD_TASK } from './actions';
 
 const initialState = {
     taskTitle: '',
-    tasks: ['эфывфыв'],
+    tasks: ['эфывфыв', '12', '123'],
 };
 
 export const taskCreatorReducer = (state = initialState, action) => {
     switch (action.type) {
-        case CHANGE_TASK_CREATER_TITLE:
-            return {
-                ...state,
-                taskTitle: action.payload,
-            }
-
         case ADD_TASK:
-            const { tasks } = state;
-            tasks.push(action.payload);
-
             return {
                 ...state,
-                tasks,
-                taskTitle: '',
+                tasks: Array.from(state.tasks).concat(action.payload),
             }
     }
 

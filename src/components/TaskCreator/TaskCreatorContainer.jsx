@@ -1,16 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import TaskCreator from './TaskCreator';
-import { setTaskTitle, addTask } from './store/actions';
+import { addTask } from './store/actions';
 
 class TaskCreatorContainer extends React.Component {
     render() {
-        const { taskTitle, setTaskTitle, addTask } = this.props;
+        const { taskTitle, addTask } = this.props;
 
         return (
             <TaskCreator
                 taskTitle={taskTitle}
-                setTaskTitle={setTaskTitle}
                 addTask={addTask}
             />
         )
@@ -25,7 +24,6 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = {
-    setTaskTitle,
     addTask,
 }
 
