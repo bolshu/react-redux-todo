@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { tasksListReducer } from '../components/TasksList/store/reducers';
+import { tasksListReducer } from './tasksList/reducers';
 
 export default combineReducers({
     tasksList: tasksListReducer

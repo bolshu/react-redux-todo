@@ -1,14 +1,14 @@
 import React from 'react';
 
-export default class TaskCreator extends React.Component {
+export default class Creator extends React.Component {
+    state = {
+        taskTitle: '',
+    }
+
     constructor(props) {
         super(props);
         this.onTitleChange = this.onTitleChange.bind(this);
         this.onButtonClick = this.onButtonClick.bind(this);
-    }
-
-    state = {
-        taskTitle: '',
     }
 
     onTitleChange(event) {

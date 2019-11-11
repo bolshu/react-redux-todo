@@ -3,8 +3,8 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
 import { Header } from './Header';
-import TaskCreatorContainer from './TaskCreator/TaskCreatorContainer';
-import TasksListContainer from './TasksList/TasksListContainer';
+import CreatorContainer from './Creator/CreatorContainer';
+import ListContainer from './List/ListContainer';
 import { Footer } from './Footer';
 
 import rootReducer from '../store/reducers';
@@ -18,9 +18,9 @@ export default class App extends Component {
                 <>
                     <Header />
 
-                    <TaskCreatorContainer />
+                    <CreatorContainer />
 
-                    <TasksListContainer />
+                    <ListContainer />
 
                     <Footer />
                 </>
