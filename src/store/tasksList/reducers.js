@@ -13,26 +13,22 @@ export const tasksListReducer = (state = initialState, action) => {
                 tasks: [...state.tasks].concat({
                     title: action.payload,
                     id: getUniqueId(),
-                    isComplete: false,
+                    isCompleted: false,
                 }),
             }
 
         case TASK.REMOVE:
             return {
                 ...state,
-                tasks: state.tasks.filter(task => {
-                    if (task.id !== action.payload) {
-                        return task;
-                    }
-                }),
+                tasks: state.tasks.filter(task => (task.id !== action.payload)),
             }
 
-        case TASK.TOGLE_COMPLETE:
+        case TASK.TOGLE_COMPLETED:
             return {
                 ...state,
                 tasks: state.tasks.map(task => {
                     if (task.id === action.payload) {
-                        task.isComplete = !task.isComplete;
+                        task.isCompleted = !task.isCompleted;
                     }
                     return task;
                 }),

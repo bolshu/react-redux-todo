@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import { Header } from './Header';
 import CreatorContainer from './Creator/CreatorContainer';
 import ListContainer from './List/ListContainer';
-import { Footer } from './Footer';
+import FooterContainer from './Footer/FooterContainer';
 
 import rootReducer from '../store/reducers';
 
@@ -22,7 +22,7 @@ export default class App extends Component {
 
                     <ListContainer />
 
-                    <Footer />
+                    <FooterContainer />
                 </>
             </Provider>
         )

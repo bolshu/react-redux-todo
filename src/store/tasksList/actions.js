@@ -1,6 +1,6 @@
 export const TASK = {
     ADD: 'ADD',
-    TOGLE_COMPLETE: 'COMPLETE',
+    TOGLE_COMPLETED: 'COMPLETE',
     REMOVE: 'REMOVE',
 }
 
@@ -9,8 +9,8 @@ export const addTask = title => ({
     payload: title,
 });
 
-export const completeTask = id => ({
-    type: TASK.TOGLE_COMPLETE,
+export const toggleCompleted = id => ({
+    type: TASK.TOGLE_COMPLETED,
     payload: id,
 });
 

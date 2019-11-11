@@ -2,7 +2,7 @@ import React from 'react';
 
 export default class Task extends React.Component {
     state = {
-        isComplete: false,
+        isCompleted: false,
     }
 
     constructor(props) {
@@ -12,7 +12,7 @@ export default class Task extends React.Component {
     }
 
     onCompleteChange() {
-        this.props.completeTask(this.props.id);
+        this.props.toggleCompleted(this.props.id);
     }
 
     onRemoveClick() {
@@ -20,7 +20,7 @@ export default class Task extends React.Component {
     }
 
     render() {
-        const { id, title, isComplete } = this.props;
+        const { id, title, isCompleted } = this.props;
 
         return (
             <li
@@ -30,7 +30,7 @@ export default class Task extends React.Component {
                     <input
                         type="checkbox"
                         onChange={this.onCompleteChange}
-                        checked={isComplete}
+                        checked={isCompleted}
                     />
                     <span>
                         {title}
