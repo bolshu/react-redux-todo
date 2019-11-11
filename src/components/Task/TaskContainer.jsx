@@ -5,13 +5,13 @@ import { toggleCompleted, removeTask } from '../../store/tasksList/actions'
 
 class ListContainer extends React.Component {
     render() {
-        const { id, title, toggleCompleted, removeTask, isComplete } = this.props;
+        const { id, title, toggleCompleted, removeTask, isCompleted } = this.props;
 
         return (
             <Task
                 id={id}
                 title={title}
-                isComplete={isComplete}
+                isCompleted={isCompleted}
                 toggleCompleted={toggleCompleted}
                 removeTask={removeTask}
             />

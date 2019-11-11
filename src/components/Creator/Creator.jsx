@@ -1,4 +1,5 @@
 import React from 'react';
+import './Creator.css';
 
 export default class Creator extends React.Component {
     state = {
@@ -28,18 +29,18 @@ export default class Creator extends React.Component {
 
     render() {
         return (
-            <>
+            <div className="creator">
                 <input
+                    className="creator__input"
                     type="text"
                     value={this.state.taskTitle}
                     onChange={this.onTitleChange}
                 />
                 <button
+                    className="creator__button"
                     onClick={this.onButtonClick}
-                >
-                    add task
-                </button>
-            </>
+                />
+            </div>
         )
     }
 }

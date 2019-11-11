@@ -1,4 +1,5 @@
 import React from 'react';
+import './Task.css';
 
 export default class Task extends React.Component {
     state = {
@@ -25,22 +26,23 @@ export default class Task extends React.Component {
         return (
             <li
                 data-id={id}
+                className={`task ${isCompleted ? 'task task--completed' : ''}`}
             >
-                <label>
+                <label className="task__checkbox-wrapper">
                     <input
                         type="checkbox"
                         onChange={this.onCompleteChange}
                         checked={isCompleted}
+                        className="task__checkbox"
                     />
                     <span>
                         {title}
                     </span>
-                    <button
-                        onClick={this.onRemoveClick}
-                    >
-                        remove task
-                        </button>
                 </label>
+                <button
+                    className="task__remove-button"
+                    onClick={this.onRemoveClick}
+                />
             </li>
         )
     }
